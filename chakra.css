@@ -405,6 +405,19 @@ a {
 	color: #eeeeee;
 }
 
+#content pre {
+	position: relative;
+	width: 75%;
+	top: 8px;
+	left: 12%;
+	border: 1px solid #989870;
+	color: #303030;
+	background: transparent;
+	font-family: monospace;
+	overflow: auto;
+	font-size: 14px;
+	padding: 0.7em;
+}
 
 /* Team */
 table.deventry {
