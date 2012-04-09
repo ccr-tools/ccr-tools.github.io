@@ -73,7 +73,9 @@ ccr -S twisted</pre>
                 <th width="360px" align="center" valign="top">
                   <!-- another icon <a href="bundles.html"><img class="floated-img-left2" src="img/icon/app_64.png" border="0"></a><br> -->
                   <p class="index">
-                  Talk about aur2ccr. Include links to forum and CCR pages for aur2ccr, and GitHub/Gitorious pages for aur2ccr.
+                  aur2ccr is a small but flexible tool that will search AUR and the Arch repos for any package (<code>aur2ccr packagename</code>), download it if it exists, update the maintainer info in the PKGBUILD (when used with the <code>-m</code>/<code>--maintainer</code> option), and create and test a CCR-ready source archive. It also handles dependency checking, and will build a package for every dependency not in CCR or the Chakra repos. The script accepts several other options, so feel free to play around with it (or just read the <b>aur2ccr(8)</b> man page). If a package fails, try editing the PKGBUILD first, with the <code>-e</code>/<code>--edit</code> option. 
+                  <br><br>
+                  To learn more about ar2ccr, see its <a href="http://chakra-project.org/bbs/viewtopic.php?pid=46032">forum thread</a>. This script is available for download from the CCR, <a href="http://chakra.sourceforge.net/ccr/packages.php?ID=2804">here</a>. It is currently maintained by <a href="https://github.com/Inkane/">Inkane</a>, <a href="https://github.com/george2/">george</a>, and the other members of the ccr-tools team.
                   </p>
                 </th>
               </tr>
