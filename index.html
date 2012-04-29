@@ -43,10 +43,24 @@
           <br><br>
           Example usage: 
           </p>
-          <pre>aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
+          <pre># Convert [package] from AUR or Arch repos to CCR package:
+aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
+# Upload [package] to CCR: 
 ccr-tools --submit [package]/[package]/[package]-[pkgver]-[pkgrel].src.tar.gz
+# Vote for [package] in CCR: 
 ccr-tools --vote [package]
-ccr -S [package]</pre>
+# Install the package from CCR
+ccr -S [package]</pre></p>
+          <p class="justifyit">
+          <br>
+          Searching: 
+          </p>
+          <pre># Search CCR for [package]: 
+ccr -Ss [package]
+# Search AUR for [package]: 
+aur2ccr --search [package]
+# Search for packages owned by [username] in CCR:
+ccr-tools --maintainer [username]</pre>
           <p class="justifyit">
           <br><br>
           More about the tools:
@@ -116,7 +130,8 @@ ccr -S [package]</pre>
 
           <br><br>
           <p class="justifyit">
-          If you would like to file a bug report, request a feature, or contribute code, you can find each of these tools in their respecitve git repositories on <a href="https://github.com/ccr-tools/">GitHub</a>, or their mirrors on <a href="https://gitorious.org/ccr-tools/">Gitorious</a>. The preferred method for reporting bugs or requesting features is to open an issue on GitHub (aur2ccr issues are <a href="https://github.com/ccr-tools/aur2ccr/issues/">here</a>, ccr-tools issues are <a href="https://github.com/ccr-tools/ccr-tools/issues/">here</a>), but you can also ask for help in the <a href="http://chakra-project.org/bbs/">Chakra forums</a>.
+          If you would like to file a bug report, request a feature, or contribute code, you can find each of these tools in their respective git repositories on <a href="https://github.com/ccr-tools/">GitHub</a>, or their mirrors on <a href="https://gitorious.org/ccr-tools/">Gitorious</a>. 
+          The preferred method for reporting bugs or requesting features is to open an issue on GitHub (aur2ccr issues are <a href="https://github.com/ccr-tools/aur2ccr/issues/">here</a>, ccr-tools issues are <a href="https://github.com/ccr-tools/ccr-tools/issues/">here</a>), but you can also ask for help on the <a href="http://chakra-project.org/bbs/">Chakra forums</a>.
           </p>
           <br><br><br>
         </div>
