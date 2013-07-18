@@ -133,7 +133,7 @@ MENU BAR
 
 #main_nav a:hover {
 	border: none;
-	background: url("../img/theme/nav_bar_r.jpg") repeat-x bottom center;
+	background: url("img/theme/nav_bar_r.jpg") repeat-x bottom center;
 	-moz-border-radius: 4px; border-radius: 4px;
 }
 
