@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="chakra.css">
+    <link rel="stylesheet" href="chakra2.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="search" type="application/opensearchdescription+xml" href="http://chakra-linux.org/sources/DDG/duckduckgo.xml" title="DuckDuckGo">
     <title>Chakra Community Repository Tools</title>
@@ -53,30 +53,54 @@
            complete. Until then, build it manually with the provided
            PKGBUILD.), and aur2ccr with <code>ccr -S aur2ccr</code>.
           <br><br>
-          Example usage: 
+          Example usage:<br><br> 
           </p>
-          <pre># Convert [package] from AUR or Arch repos to CCR package:
-aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
-# Upload [package] to CCR: 
-ccr-tools --submit [package]/[package]/[package]-[pkgver]-[pkgrel].src.tar.gz
-# Vote for [package] in CCR: 
-ccr-tools --vote [package]
-# Install the package from CCR
-ccr -S [package]</pre></p>
+          <table class="index2" width="720px" border="0" valign="middle" align="center">
+            <tbody>
+              <tr height="76px">
+                <th width="360px" padding=align="left" valign="top">
+                  <p class=index>
+                    <code>
+                      # Convert [package] from AUR or Arch repos to CCR package:
+                      <br>aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
+                      <br># Upload [package] to CCR: 
+                      <br>ccr-tools --submit [package]/[package]/[package]-[pkgver]-[pkgrel].src.tar.gz
+                      <br># Vote for [package] in CCR: 
+                      <br>ccr-tools --vote [package]
+                      <br># Install the package from CCR
+                      <br>ccr -S [package]
+                    </code>
+                  </p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
           <p class="justifyit">
-          <br>
-          Searching: 
+          <br><br>
+          Searching:<br><br> 
           </p>
-          <pre># Search CCR for [package]: 
-ccr -Ss [package]
-# Search AUR for [package]: 
-aur2ccr --search [package]
-# Search for packages owned by [username] in CCR:
-ccr-tools --maintainer [username]
-# Searching with python-ccr:
->>> import ccr
->>> ccr.search('[package]')
->>> ccr.msearch('[username]')</pre>
+          <table class="index2" width="720px" border="0" valign="middle" align="center">
+            <tbody>
+              <tr height="76px">
+                <th width="360px" padding=align="left" valign="top">
+                  <p class=index>
+                    <code>
+                      # Search CCR for [package]: 
+                      <br>ccr -Ss [package]
+                      <br># Search AUR for [package]: 
+                      <br>aur2ccr --search [package]
+                      <br># Search for packages owned by [username] in CCR:
+                      <br>ccr-tools --maintainer [username]
+                      <br># Searching with python-ccr:
+                      <br>>>> import ccr
+                      <br>>>> ccr.search('[package]')
+                      <br>>>> ccr.msearch('[username]')
+                    </code>
+                  </p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
           <p class="justifyit">
           <br><br>
           More about the tools:
