@@ -1,283 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <link rel="stylesheet" href="chakra2.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="search" type="application/opensearchdescription+xml" href="http://chakra-linux.org/sources/DDG/duckduckgo.xml" title="DuckDuckGo">
-    <title>Chakra Community Repository Tools</title>
+    <meta charset="UTF-8">
+    <title>CCR Tools by ccr-tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <div class="bcontentwrap"><div class="rbcontent">
-      <div id="wrapper">
-        <h1>&nbsp;</h1>
-        <div id="main_nav">
-          <ul>
-            <li><a href="http://chakraos.org/code.html">Code</a></li>
-            <li><a href="http://chakraos.org/bugs/">Bugs</a></li>
-            <li><a href="http://chakraos.org/wiki/">Wiki</a></li>
-            <li><a href="http://chakraos.org/ccr/">CCR</a></li>
-            <li><a href="http://chakraos.org/bbs/">Forums</a></li>
-            <li><a href="http://chakraos.org/packages/">Packages</a></li>
-            <li><a href="http://chakraos.org/get/">Get</a></li>
-            <li><a href="http://chakraos.org/news/">News</a></li>
-            <li><a href="http://chakraos.org/">Home</a></li>
-          </ul>
-        </div>
-        <div id="chakra_nav">
-          <ul>
-            <li><a href="http://chakraos.org/donate.html">&nbsp; Donate &nbsp;</a></li>
-            <li><a href="http://chakraos.org/team.html">&nbsp; Team &nbsp;</a></li> 
-            <li><a href="http://chakraos.org/irc.html">&nbsp; IRC / Mailing &nbsp;</a></li>
-            <li><a href="http://chakraos.org/wiki/index.php/Frequently_Asked_Questions">&nbsp; FAQ &nbsp;</a></li> 
-            <li><a href="http://chakraos.org/about.html">&nbsp; About Chakra &nbsp;</a></li>
-          </ul>
-          <br><br>
-          <h3>Chakra Community Repository Tools (<a href="https://github.com/ccr-tools/">@ccr-tools</a>)</h3>
-        </div>
-        <div id="content">
-          <p class="justifyit">  
-          The Chakra Community Repository tools are a collection of
-          small apps and libraries to help users interact with the CCR.
-          These tools include <code>ccr</code>, the CCR package
-          installation script, <code>ccr-tools</code>, a small script
-          for talking to CCR via CLI, meant mostly for package
-          maintainers, <code>python-ccr</code>, a python library for
-          interacting with the CCR, and <code>aur2ccr</code>, a program
-          that automatically converts packages from AUR and the Arch
-          repos to CCR source packages.
-          You can install ccr and ccr-tools with <code>pacman -S
-          ccr</code>, python-ccr with <code>ccr -S python-ccr</code>
-          (NOTE: python-ccr will be added to the CCR when version 0.2 is
-           complete. Until then, build it manually with the provided
-           PKGBUILD.), and aur2ccr with <code>ccr -S aur2ccr</code>.
-          <br><br>
-          Example usage:<br><br> 
-          </p>
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" padding=align="left" valign="top">
-                  <p class=index>
-                    <code>
-                      # Convert [package] from AUR or Arch repos to CCR package:
-                      <br>aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
-                      <br># Upload [package] to CCR: 
-                      <br>ccr-tools --submit [package]/[package]/[package]-[pkgver]-[pkgrel].src.tar.gz
-                      <br># Vote for [package] in CCR: 
-                      <br>ccr-tools --vote [package]
-                      <br># Install the package from CCR
-                      <br>ccr -S [package]
-                    </code>
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <p class="justifyit">
-          <br><br>
-          Searching:<br><br> 
-          </p>
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" padding=align="left" valign="top">
-                  <p class=index>
-                    <code>
-                      # Search CCR for [package]: 
-                      <br>ccr -Ss [package]
-                      <br># Search AUR for [package]: 
-                      <br>aur2ccr --search [package]
-                      <br># Search for packages owned by [username] in CCR:
-                      <br>ccr-tools --maintainer [username]
-                      <br># Searching with python-ccr:
-                      <br>>>> import ccr
-                      <br>>>> ccr.search('[package]')
-                      <br>>>> ccr.msearch('[username]')
-                    </code>
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <p class="justifyit">
-          <br><br>
-          More about the tools:
-          </p>
-          <br>
+    <section class="page-header">
+      <h1 class="project-name">CCR Tools</h1>
+      <h2 class="project-tagline">Chakra Community Repository tools</h2>
+    </section>
 
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" align="center" valign="top">
-                <!-- icon here <a href="about.html"><img
-                class="floated-img-left2" src="img/icon/chakra_64.png"
-                border="0"></a><br> -->
-                  <p class="index">
-                  The ccr-tools <a
-                  href="https://github.com/ccr-tools/ccr-tools/">repo</a>
-                  includes the 'ccr' and 'ccr-tools' scripts, which are
-                  distrubuted in the Chakra repos as <a
-                  href="http://www.chakraos.org/packages/index.php?act=search&searchpattern=ccr">ccr</a>.
-                  The first script, 'ccr', can be used to install
-                  user-created packages from the <a
-                  href="http://chakraos.org/ccr/">CCR</a>.
-                  It also handles searching through CCR packages
-                  (<code>ccr -Ss keyword</code>) and updating installed
-                  CCR packages (<code>ccr -Syu</code>).
-                  It's companion script, 'ccr-tools' (formerly
-                  'ccr-vote'), can be used to vote for packages
-                  in the CCR (<code>ccr-tools --vote
-                  packagename</code>), upload new packages to
-                  the CCR (<code>ccr-tools --submit
-                  pkgname-pkgver-pkgrel.src.tar.gz</code>), list
-                  CCR packages maintained by a given user
-                  (<code>ccr-tools --maintainer username</code>), and
-                  more.
-                  It is meant mainly for use by CCR package maintainers,
-                  as opposed to CCR users.
-                  <br><br>
-                  The 'ccr' script is a fork of 'packer', which was
-                  originally written by Matthew Bruenig.
-                  It is licensed under version 3 of the GPL. 
-                  'ccr-tools' was originally forked from 'aurvote', and
-                  is now maintained by <a
-                  href="https://github.com/Ram-Z/">Ram-Z</a> and the
-                  other members of the ccr-tools team. 
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
+    <section class="main-content">
+      <h2>
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ccr-tools/???">???</a>
+</h2>
 
-          <br>
+<p>Top secret. Coming soon.</p>
 
-          <table class="index" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" align="center" valign="top">
-                <!-- icon here <a href="about.html"><img
-                class="floated-img-left2" src="img/icon/chakra_64.png"
-                border="0"></a><br> -->
-                  <p class="index">
-                  The <a
-                  href=https://github.com/ccr-tools/python-ccr/>python-ccr</a>
-                  library allows easy access to a variety of functions
-                  for working with the Chakra Community Repository. 
-                  Currently, it works with python2, but porting the lib
-                  to python3 is currently in progress.
-                  This library includes functions such as 'search',
-                  'msearch', 'info', 'vote', 'flag', 'notify', and much
-                  more.
-                  <br><br>
-                  python-ccr is provided under version 2 of the GPL, or
-                  at your option, any later version.
-                  The python2 library was written and is currently
-                  maintained by <a
-                  href="https://github.com/george2/">george</a>, <a
-                  href="https://github.com/Inkane/">Inkane</a>, and the
-                  <a href="https://github.com/ccr-tools/">other
-                  members</a> of the ccr-tools team.
-                  The python3 library is being written by <a
-                  href="https://github.com/stephenmac7/">stephenmac7</a>
-                  and the <a href="https://github.com/ccr-tools/">other
-                  members</a> of the ccr-tools team.
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
+<h2>
+<a id="python-ccr" class="anchor" href="#python-ccr" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ccr-tools/python-ccr">python-ccr</a>
+</h2>
 
-          <br>
+<p>Interact with the Chakra Community Repository from Python 3.</p>
 
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" align="center" valign="top">
-                  <!-- another icon <a href="bundles.html"><img
-                  class="floated-img-left2" src="img/icon/app_64.png"
-                  border="0"></a><br> -->
-                  <p class="index">
-                  aur2ccr is a small but flexible tool that will search
-                  AUR and the Arch repos for any package (<code>aur2ccr
-                  packagename</code>), download it if it exists,
-                  update the maintainer info in the PKGBUILD (when used
-                  with the <code>-m</code>/<code>--maintainer</code>
-                  option), and create and test a CCR-ready source archive. 
-                  It also handles dependency checking, and will build a
-                  package for every dependency not in CCR or the Chakra
-                  repos.
-                  The script accepts several other options, so feel free
-                  to play around with it (or just read the <b>aur2ccr(8)</b>
-                  man page).
-                  If a package fails, try editing the PKGBUILD first,
-                  with the <code>-e</code>/<code>--edit</code> option.
-                  <br><br>
-                  To learn more about aur2ccr, see its <a
-                  href="http://chakraos.org/bbs/viewtopic.php?pid=46032">forum
-                  thread</a>.
-                  This script is available for download from the CCR, <a
-                  href="http://chakra.sourceforge.net/ccr/packages.php?ID=2804">here</a>.
-                  It is currently maintained by <a
-                  href="https://github.com/Inkane/">Inkane</a>, <a
-                  href="https://github.com/george2/">george</a>, and the
-                  other members of the ccr-tools team.
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-      
-          <br>
-      
-          <!-- <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" align="center" valign="top">
-                <!-- yet another icon <img class="floated-img-left2" --
-                src="img/icon/chakra-kde_64.png" border="0"><br>
-                  <p class="index">
-                  Talk about more stuff? Maybe hide this for now, until
-                  CCR2 (the new CCR web interface) is up.
-                </th>
-              </tr>
-            </tbody>
-          </table>
-      
-          <br> -->
+<h2>
+<a id="aur2ccr" class="anchor" href="#aur2ccr" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ccr-tools/aur2ccr">aur2ccr</a>
+</h2>
 
-          <!-- if more stuff is needed later, put it here -->
+<p>A helper script for porting packages from Arch to Chakra.</p>
 
-          <br><br>
-          <p class="justifyit">
-          If you would like to file a bug report, request a feature, or
-          contribute code, you can find each of these tools in their
-          respective git repositories on <a
-          href="https://github.com/ccr-tools/">GitHub</a>, or their
-          mirrors on <a
-          href="https://gitorious.org/ccr-tools/">Gitorious</a>.
-          The preferred method for reporting bugs or requesting features
-          is to open an issue on GitHub (aur2ccr issues are <a
-          href="https://github.com/ccr-tools/aur2ccr/issues/">here</a>,
-          python-ccr issues are <a
-          href="https://github.com/ccr-tools/python-ccr/issues/">here</a>,
-          and ccr-tools issues are <a
-          href="https://github.com/ccr-tools/ccr-tools/issues/">here</a>),
-          but you can also ask for help on the <a
-          href="http://chakraos.org/bbs/">Chakra forums</a>.
-          </p>
-          <br><br><br>
-        </div>
+<h2>
+<a id="ccr-tools" class="anchor" href="#ccr-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ccr-tools/ccr-tools">ccr-tools</a>
+</h2>
 
-        <!-- Footer -->
-        <div id="foot">
-          CSS and images copyright &copy; 2006-2013 <a
-          href="http://chakraos.org/team.html">The Chakra
-          Developers</a> | <a
-          href="http://chakraos.org/disclaimer.html">Disclaimer</a>
-          &nbsp;
-        </div>
+<p>Ambiguously named bash scripts for interacting with the Chakra Community Repository.</p>
 
-      </div>
-    </div>
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
