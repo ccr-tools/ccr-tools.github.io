@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-<<<<<<< Updated upstream
     <meta charset="UTF-8">
-    <title>CCR Tools by ccr-tools</title>
+    <title>CCR Tools</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-=======
-    <link rel="stylesheet" href="chakra.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Chakra Community Repository Tools</title>
->>>>>>> Stashed changes
   </head>
   <body>
-<<<<<<< Updated upstream
     <section class="page-header">
       <h1 class="project-name">CCR Tools</h1>
       <h2 class="project-tagline">Chakra Community Repository tools</h2>
@@ -32,105 +25,6 @@
 <h2>
 <a id="python-ccr" class="anchor" href="#python-ccr" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ccr-tools/python-ccr">python-ccr</a>
 </h2>
-=======
-    <div class="bcontentwrap"><div class="rbcontent">
-      <div id="wrapper">
-        <h1>&nbsp;</h1>
-        <div id="main_nav">
-          <ul>
-            <li><a href="http://chakraos.org/code.html">Code</a></li>
-            <li><a href="http://chakraos.org/bugs/">Bugs</a></li>
-            <li><a href="http://chakraos.org/wiki/">Wiki</a></li>
-            <li><a href="http://chakraos.org/ccr/">CCR</a></li>
-            <li><a href="http://chakraos.org/bbs/">Forums</a></li>
-            <li><a href="http://chakraos.org/packages/">Packages</a></li>
-            <li><a href="http://chakraos.org/get/">Get</a></li>
-            <li><a href="http://chakraos.org/news/">News</a></li>
-            <li><a href="http://chakraos.org/">Home</a></li>
-          </ul>
-        </div>
-        <div id="chakra_nav">
-          <ul>
-            <li><a href="http://chakraos.org/donate.html">&nbsp; Donate &nbsp;</a></li>
-            <li><a href="http://chakraos.org/team.html">&nbsp; Team &nbsp;</a></li> 
-            <li><a href="http://chakraos.org/irc.html">&nbsp; IRC / Mailing &nbsp;</a></li>
-            <li><a href="http://chakraos.org/wiki/index.php/Frequently_Asked_Questions">&nbsp; FAQ &nbsp;</a></li> 
-            <li><a href="http://chakraos.org/about.html">&nbsp; About Chakra &nbsp;</a></li>
-          </ul>
-          <br><br>
-          <h3>Chakra Community Repository Tools</h3>
-        </div>
-        <div id="content">
-          <p class="justifyit">  
-          The Chakra Community Repository tools are a collection of
-          small apps and libraries to help users interact with the CCR.
-          These tools include <code>ccr</code>, the CCR package
-          installation script, <code>ccr-tools</code>, a small script
-          for talking to CCR via CLI, meant mostly for package
-          maintainers, <code>python-ccr</code>, a python library for
-          interacting with the CCR, and <code>aur2ccr</code>, a program
-          that automatically converts packages from AUR and the Arch
-          repos to CCR source packages.
-          You can install ccr and ccr-tools with <code>pacman -S
-          ccr</code>, python-ccr with <code>ccr -S python-ccr</code>
-          (NOTE: python-ccr will be added to the CCR when version 0.2 is
-           complete. Until then, build it manually with the provided
-           PKGBUILD.), and aur2ccr with <code>ccr -S aur2ccr</code>.
-          <br><br>
-          Example usage:<br><br> 
-          </p>
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" padding=align="left" valign="top">
-                  <p class=index>
-                    <code>
-                      # Convert [package] from AUR or Arch repos to CCR package:
-                      <br>aur2ccr -m "My Name &lt;email@example.com&gt;" [package]
-                      <br># Upload [package] to CCR: 
-                      <br>ccr-tools --submit [package]/[package]/[package]-[pkgver]-[pkgrel].src.tar.gz
-                      <br># Vote for [package] in CCR: 
-                      <br>ccr-tools --vote [package]
-                      <br># Install the package from CCR
-                      <br>ccr -S [package]
-                    </code>
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <p class="justifyit">
-          <br><br>
-          Searching:<br><br> 
-          </p>
-          <table class="index2" width="720px" border="0" valign="middle" align="center">
-            <tbody>
-              <tr height="76px">
-                <th width="360px" padding=align="left" valign="top">
-                  <p class=index>
-                    <code>
-                      # Search CCR for [package]: 
-                      <br>ccr -Ss [package]
-                      <br># Search AUR for [package]: 
-                      <br>aur2ccr --search [package]
-                      <br># Search for packages owned by [username] in CCR:
-                      <br>ccr-tools --maintainer [username]
-                      <br># Searching with python-ccr:
-                      <br>>>> import ccr
-                      <br>>>> ccr.search('[package]')
-                      <br>>>> ccr.msearch('[username]')
-                    </code>
-                  </p>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <p class="justifyit">
-          <br><br>
-          More about the tools:
-          </p>
-          <br>
->>>>>>> Stashed changes
 
 <p>Interact with the Chakra Community Repository from Python 3.</p>
 
